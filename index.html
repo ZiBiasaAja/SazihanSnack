@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sazihan</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;1,100;1,300;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="#home" class="navbar-logo">Sazihan<div class="warna">Snack</div></a
+        >
+    </nav>
+    <section class="hero" id="home">
+      <main class="info">
+        <h1>Sazihan Snack</h1>
+        <p>
+          Nikmati kelezatan tak terbantahkan dalam setiap gigitan dengan keripik
+          kentang premium kami. Keripik kentang kami menjadi teman sempurna
+          untuk menemani momen santai atau sebagai pendamping setiap acara.
+          Temukan keajaiban rasa dan kualitas tinggi dalam setiap kemasan
+          keripik kentang kami yang akan memanjakan lidah Anda.
+        </p>
+        <a href="#produk" class="cta">Pesan Sekarang</a>
+      </main>
+    </section>
+    <!-- Tentang Kami -->
+    <section id="about" class="about">
+      <h2><span>Tentang</span> Kami</h2>
+      <div class="row">
+        <div class="about-img">
+          <div class="slideshow-container">
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="foto/Sazihan Snack (3).png" style="width: 100%" />
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="foto/Sazihan Snack (1).png" style="width: 100%" />
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="foto/Sazihan Snack1.png" style="width: 100%" />
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+          </div>
+          <br />
+
+          <div style="text-align: center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+          <div class="tentang">
+            <h3>Keripik Kentang Kekinian dari Ibu Rumah Tangga, Inspirasi dari Cinta Keluarga!</h3>
+            <p>
+              Hai, selamat datang di Sazihan Snack! Saya, ibu rumah tangga disini, mulai bikin keripik kentang yang enak sejak 2018. Saya suka banget masak-masak, dan ide bikin keripik ini sebenernya dari anak-anak saya: Annisa Khairah, Arya Yusuf Fauzi, dan Muhammad Frahan. Saya harap, keripik kentang gue ini jadi temen kalian pas lagi pengen ngemil yang simple tapi mantap. Bukan cuman jualan, Saya juga suka ikutan kegiatan sosial di sekitar. Makasih ya udah nyempetin mampir ke Sazihan Snack saya. Kalo ada yang mau ditanyain atau pesen, chat aja langsung. Ayo, seru-seruan bareng keripik kentang gue!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Produk -->
+    <div class="card" id="produk">
+      <div class="circle" style="--clr: rgb(215, 219, 0)">
+        <img src="foto/kentang (2).png" class="logo" />
+      </div>
+      <div class="content">
+        <h2>Kentang Original</h2>
+        <p>
+          Kenikmatan asli dalam setiap gigitan diproses dengan teliti
+          dari kentang pilihan, kentang original kami menjadi camilan ideal
+          untuk memuaskan hasrat rasa Anda.
+        </p>
+        <a href="formulir/ori.html">Order</a>
+      </div>
+      <img src="foto/a (2).png" class="produk_sazihan" />
+    </div>
+    <div class="card">
+      <div class="circle" style="--clr: rgb(215, 219, 0)">
+        <img src="foto/kentang (1).png" class="logo" />
+      </div>
+      <div class="content">
+        <h2>Kentang Sambal</h2>
+        <p>
+          Sensasi pedas dalam setiap gigitan.
+          Dipotong tipis dan digoreng kriuk, Camilan yang cocok memuaskan hasrat rasa pedas Anda.</p>
+        <a href="formulir/sambal.html">Order</a>
+      </div>
+      <img src="foto/a (1).png" class="produk_sazihan" />
+    </div>
+
+    <!-- hubungi kami -->
+
+    <section id="contact" class="contact">
+      <h2><span>Kontak</span> Kami</h2>
+      <p>Anda dapat menghubungi kami untuk mengetahui produk dan layanan dari kami atau Anda dapat datang langsung ke tempat kami.</p>
+      <div class="row">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.1788824469986!2d98.6984378153513!3d3.5461825903732755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30313168ada159a7%3A0xdfc4be15b9d5679!2sD&#39;ic%20Picture!5e0!3m2!1sid!2sid!4v1677904940931!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"class=
+        "map"></iframe>
+        <form action="">
+          <div class="input-group">
+            <i data-feather="user"></i>
+            <input type="text" placeholder="Nama">
+          </div>
+          <div class="input-group">
+            <i data-feather="phone"></i>
+            <input type="tel" placeholder="No HP">
+          </div>
+          <div class="input-group">
+            <i data-feather="mail"></i>
+            <input type="text" placeholder="Saran">
+          </div>
+          <button type="submit" class="btn">Kirim</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="socials">
+        <a href="https://www.instagram.com/sazihansnack" target="_blank"><i data-feather="instagram"></i></a>
+        <a href="https://github.com/ZiBiasaAja" target="_blank"><i data-feather="github"></i></a>
+        <a href="https://www.youtube.com/@KelasTerbuka" target="_blank"><i data-feather="youtube"></i></a>
+      </div>
+      <div class="credit">
+        <p>Created by <a href="">Sazihan Zi untuk Fauzi</a>.| &copy;2023.</p>
+      </div>
+    </footer>
+    <script>
+      feather.replace();
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,411 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  outline: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.1rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  border-bottom: 1px solid rgba(8, 10, 10, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgb(215, 219, 0);
+  font-style: italic;
+}
+
+.navbar .navbar-logo .warna {
+  float: right;
+  text-decoration: underline;
+  color: #fff;
+}
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("foto/Desain\ tanpa\ judul\ \(2\).png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.hero .info {
+  padding: 13rem 7%;
+}
+.hero .info h1 {
+  font-size: 5rem;
+  margin-top: 100px;
+  color: rgb(215, 219, 0);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+  line-height: 1.2;
+}
+.hero .info p {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+}
+.hero .info .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #000;
+  background-color: rgb(215, 219, 0);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 1, 0.8);
+}
+.card {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  margin: 20px;
+  border-radius: 20px;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.card:hover {
+  width: 600px;
+  transition-delay: 0s;
+}
+.card .circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.card .circle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--clr);
+  border-radius: 20px;
+  clip-path: circle(120px at center);
+  transition: 0.5s;
+}
+.card:hover .circle::before {
+  clip-path: circle(400px at center);
+}
+.card .circle .logo {
+  position: relative;
+  margin: auto;
+  width: 200px;
+}
+.card:hover .circle .logo {
+  transform: scale(0);
+  transition-delay: 0s;
+}
+.content {
+  position: relative;
+  width: 50%;
+  left: 20%;
+  padding: 20px 20px 20px 40px;
+  opacity: 0;
+  transition: 0.5s;
+  visibility: hidden;
+}
+.card:hover .content {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+.content h2 {
+  color: rgba(1, 1, 1, 0.8);
+  text-transform: uppercase;
+  font-size: 3em;
+  line-height: 1em;
+}
+.content p {
+  color: rgba(1, 1, 1, 0.8);
+}
+.content a {
+  position: relative;
+  color: black;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
+}
+.card .produk_sazihan {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  height: 350px;
+  width: 300px;
+  transition: 0.5s;
+  transition-delay: 0s;
+}
+.card:hover .produk_sazihan {
+  left: 72%;
+  transform: translate(-50%, -50%) scale(1);
+  transition-delay: 0.5s;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 75%;
+  }
+  .hero .info {
+    padding: 13rem 7%;
+    font-size: 100%;
+  }
+  .card {
+    width: auto;
+    max-width: 350px;
+    align-items: flex-start;
+  }
+  .about .row {
+    flex-wrap: wrap;
+  }
+  .contact .row {
+    flex-wrap: wrap;
+  }
+  .contact .row .map {
+    height: 30rem;
+  }
+  .contact .row form {
+    padding: 0;
+  }
+  .slider {
+    width: 90%;
+  }
+  .card .produk_sazihan {
+    height: 300px;
+    width: 250px;
+  }
+}
+
+.about h2 {
+  padding: 8rem 7% 1.4rem;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: -4.5rem;
+  color: rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+}
+.about h2 span,
+.contact h2 span {
+  color: rgb(215, 219, 0);
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 45rem;
+  padding-top: 10%;
+  width: 150%;
+}
+
+.about .row .tentang {
+  flex: 1 1 45rem;
+  padding: 1rem;
+}
+
+.about .row .tentang h3 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: #000000;
+}
+
+.about .row .tentang p {
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  color: #000000;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.contact h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+.contact .row {
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  background-color: rgb(215, 219, 0);
+}
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+.contact .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: #fff;
+  border: 1px solid #000000;
+  padding-left: 2rem;
+}
+.contact .row form .input-group input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 2rem;
+  color: #000000;
+}
+.contact .row form .btn {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  color: #000;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+footer {
+  background-color: rgba(1, 1, 1, 0.8);
+  color: rgb(215, 219, 0);
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+}
+footer .socials {
+  padding: 1rem 0;
+}
+footer .socials a {
+  color: rgb(215, 219, 0);
+  margin: 1rem;
+}
+footer .socials a:hover,
+footer .link a:hover {
+  color: #fff;
+}
+footer .credit a {
+  color: #fff;
+  font-weight: bold;
+}
